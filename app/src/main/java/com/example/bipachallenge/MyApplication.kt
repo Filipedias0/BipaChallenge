@@ -13,7 +13,7 @@ class MyApplication : Application() {
         super.onCreate()
 
         startKoin {
-            modules(retrofitModule, repositoryModule)
+            modules(retrofitModule, useCaseModule, repositoryModule)
         }
 
     }
