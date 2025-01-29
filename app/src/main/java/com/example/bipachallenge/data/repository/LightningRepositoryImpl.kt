@@ -8,8 +8,8 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class LightningRepository(private val service: LightningApiService) {
-    suspend fun getNodeRankings(): List<NodeRankingData> {
+class LightningRepositoryImpl(private val service: LightningApiService):LightningRepository {
+    override suspend fun getNodeRankings(): List<NodeRankingData> {
         return try {
             service.getNodeRankings().toNodeRankingDataList()
         }catch (e: Exception){

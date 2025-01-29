@@ -1,6 +1,6 @@
 package com.example.bipachallenge.domain.useCase
 
-import com.example.bipachallenge.data.repository.LightningRepository
+import com.example.bipachallenge.data.repository.LightningRepositoryImpl
 import com.example.bipachallenge.domain.model.NodeRankingData
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -13,7 +13,7 @@ import org.junit.Assert.assertEquals
 
 class GetNodeRankingsUseCaseTest {
 
-    private lateinit var lightningRepository: LightningRepository
+    private lateinit var lightningRepository: LightningRepositoryImpl
     private lateinit var getNodeRankingsUseCase: GetNodeRankingsUseCase
 
     @Before

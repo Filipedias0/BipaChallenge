@@ -21,7 +21,7 @@ class LightningRepositoryTest {
     @Before
     fun setUp() {
         apiService = mockk()
-        repository = LightningRepository(apiService)
+        repository = LightningRepositoryImpl(apiService)
     }
 
     @After
